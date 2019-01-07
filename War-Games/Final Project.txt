@@ -1,0 +1,21 @@
+﻿Name: Dylan Sain
+TA: Stephen Hutt
+Recitation: Thursday 2:00
+
+
+What is the problem you are solving?
+---------------------------------------------------------------------
+I am creating a risk-like game. It’ll involve trying to take and hold the entirety of a user created map. There will be four players, each will have a starting territory at each corner of the map. After each turn the territories will gain new armies. These armies will then be used by the player to capture new territories.
+---------------------------------------------------------------------
+How are you going to solve this problem?
+---------------------------------------------------------------------
+I have a class game, a class player and a class territory. The game class is the master class, and most of the work is done in there. It holds an array of territories and an array of players in order to keep track of the game board and players playing. It has the ability to start a game from scratch or load in a saved game. It has functions like turn, userTurn, cpuTurn, and endTurn as the main body of the game. turn loops while the game is still going, and calls userTurn or cpuTurn depending on the current player. endTurn happens after each player has taken his turn, and increments the number of armies in each territory. cpuTurn randomly does an action for the cpu, and userTurn prompts the user for what they want to do through a series of questions. Functions like FindNewColor and ResetColor make the board easier to understand by changing the color of the game board. The coutBoard is how to board is placed on the screen. isOver checks multiple conditions to find whether or not the game is over. Finally menuCheck prints the menu, which has multiple options such as saving the game, quitting the game, and player stats. The territory class is much more simple and just handles the calculations of armies. It also holds a pointer to the player that owns it. The player class holds some information about each player such as name, number, and color. It also holds the stats for the player, and has functions that save the player’s stats, loads the player’s stats, and shows the player stats. 
+---------------------------------------------------------------------
+Making the game work
+---------------------------------------------------------------------
+The player class works on its own, except for the fact that the player stats array will not change without the other classes. It can be created by either passing in some information or a file to load the player’s information
+The territory class needs the player class to work. It uses information from the player class to calculate and show the battles between two armies. It is created by passing in information.
+The game class requires both player and territory to work. Is uses the information stored in player and territory to create and manipulate a working game. It can be created by passing in information or loading in a file.
+
+
+The main.cpp has some code to help get the game jump started as to make sure that the correct game class is being called for the correct type of game (new or saved)

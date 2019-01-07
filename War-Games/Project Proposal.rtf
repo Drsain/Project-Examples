@@ -1,0 +1,102 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Name: Dylan Sain
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 TA: Stephen Hutt
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Recitation: Thursday 2:00
+\f1\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 Project Title: Forever War
+\f1\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\fs29\fsmilli14667 \cf2 =====================================================================
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 What is the problem you are solving?
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 I am creating a risk-like game. It\'92ll involve trying to take and hold the entirety of a user created map. There will be four players, each will have a starting territory at each corner of the map. After each turn the territories will gain new armies. These armies will then be used by the player to capture new territories.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 How are you going to solve this problem?
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 I have a class game, a class player and a class territory. The territory class will store the owner of the territory and the number of armies in that territory. It also has some functions that will calculate what will happen when two armies interact within the territory. The player class will hold an array of territories. This will be used to make sure that the user is doing a valid move (only interacting with their armies and territories). It also has functions that will save and load player\'92s stats in files. It stores these stats into an array. It also has the name of the player. The game class has an array of players and a master array of territories. The player array will be used to cycle through each player per turn. The game will start by calling the function turn which goes through each player. If the player is not user controlled it calls the cpuTurn five times. This randomly picks a valid move five times. If the player is controlled, then it calls the function userTurn. This function asks the user for a valid move and then completes it and shows the outcome five times. After this is done for each player the function calls endTurn which gives each of the player territories one more army. This continues until the function isOver is returned true, or when a player owns every territory.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 Describe each of the classes you are going to make.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 (Reference your header files)
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The game class is where most of the game will happen. It holds the player and gameboard arrays. It also holds the turn functions which are used when a player takes their turn. The player class holds the information about each player, including their stats, controlled territories and name. The territory class holds the number of armies and the name of the controlled party. It also holds some territory calculations to figure out what happens when two armies interact.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 How will you use an array of user defined type?
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 My first array of objects is the array of players. This will be used to go through each player\'92s turn in the game. The second is the gameboard which is the master game and is the template for what the user sees on the screen. The third is within the player class and it keeps track of each player's controlled territories to make sure that the user is not doing an action for an amry that they do not control.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 How will you test your project?
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 I will test the project by calling individual functions with built in test cases to make sure that the individual functions work properly. After I know that they work properly, I will work with two or three functions at a time, and then work up to implementing the whole game. Once I think I get the game to work I will start playing it and do weird things just to make sure that it can handle these cases.
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 What are the 'edge cases' for your project? How will you handle them?
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 ---------------------------------------------------------------------
+\f1\fs24 \
+
+\f0\fs29\fsmilli14667 The edge cases for my project are when a user tries to do something that is not a part of the code. At these instances I will either have to try to implement what the user was trying to say by using functions like remove punctuation or using lowercase and uppercase functions, or just asking the user to \'91try again\'92 until the user types a recognized answer.
+\f1\fs24 \
+}

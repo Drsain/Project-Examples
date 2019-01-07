@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1511131866 source:/home/user/Dropbox/Assignments/Assingment8/main.cpp
+	<iostream>
+	"game.h"
+	"player.h"
+	"territory.h"
+
+1511114055 /home/user/Dropbox/Assignments/Assingment8/game.h
+	"player.h"
+	"territory.h"
+	<string>
+	<iostream>
+	<math.h>
+	<fstream>
+	<stdlib.h>
+	<time.h>
+	<iomanip>
+
+1511132698 /home/user/Dropbox/Assignments/Assingment8/player.h
+	<string>
+	<iostream>
+	<math.h>
+	<fstream>
+
+1511113110 /home/user/Dropbox/Assignments/Assingment8/territory.h
+	"player.h"
+	<string>
+	<iostream>
+	<math.h>
+	<fstream>
+	<cstdlib>
+	<stdlib.h>
+	<time.h>
+
+1511133182 source:/home/user/Dropbox/Assignments/Assingment8/player.cpp
+	"player.h"
+
+1512158611 source:/home/user/Dropbox/Assignments/Assingment8/game.cpp
+	"game.h"
+
+1511129662 source:/home/user/Dropbox/Assignments/Assingment8/territory.cpp
+	"territory.h"
+
+1508966782 /home/user/Dropbox/Assignments/Assingment8/Split.cpp
+
