@@ -10,3 +10,6 @@ For my final in CSCI 1300 class, I was charged with using everything that we lea
 
 ## Cars
 Using R-Studio I read in a database of cars on a car search website. Based on certain characteristics of the cars I would plot various graphs, including a line of best fit. I would then find the car farthest below that line in order to find the best deal for the two variables being listed.
+
+## Chalk Cliffs Pictures
+Using a software called cloud compare I was able to investigate fitting two large sets of cloud data(60+ million points) in the same x-y coordinate using different processes. I also cut out smaller samples for fitting and attempted to understand other tools that cloud compare has.
