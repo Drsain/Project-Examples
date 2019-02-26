@@ -1,0 +1,239 @@
+<html>
+	<head>
+		<title>Twitter User Stats</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='twitter.ico') }}">
+		<style>
+		.dropbtnCenter{
+			background-color: grey;
+			color: white;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+		}
+		.dropdown-contentCenter{
+			display: none;
+			background-color: #f1f1f1;
+			max-width: 128px;
+			overflow: auto;
+			z-index: 1;
+		}
+		.dropdown-contentCenter a{
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.show{display: block;}
+		</style>
+	</head>
+	<body bgcolor="#2DAAE1">
+		<div id="handleSearch" align="center" style= "position: absolute; top: 25%; right: 0;left: 0;">
+			<form action="" method="post">
+			<font face = "Arial" color = "white" size="12pt">Search for Handle: @</font>
+			<input type="text" name="userName" id="handle" placeholder="ex: kanyewest" height="100px" value = "{{request.form.userName}}">
+			<input class="btn btn-default" type = "submit" value = "Search">
+		</form></div>
+		<div id = "dropDiv" class="dropdown" align="center" style= "position: absolute; top: 50%; right: 0;left: 0;">
+			<button id ="optionButton" class="dropbtnCenter" onclick="dropdownF()">Select Option</button>
+			<div id = "optionSelector" class="dropdown-contentCenter" align="center">
+				<a href = "#" onclick="switchTable(1)">Show Feed</a>
+				<a href = "#" onclick="switchTable(2)">User Info</a>
+				<a href = "#" onclick="switchTable(3)">Tweet Info</a>
+				<a href = "#" onclick="switchTable(4)">Follower Info</a>
+			</div>
+		</div>
+		<div id = "feed" align="center"></div>
+		<div id = "userInfoTable" align="center" style= "position: absolute; top: 25%; right: 0;left: 0; visibility: hidden; max-width: 75%;margin: auto" ><table width="75%" class="table" border="1">
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[0]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[1]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[2]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[3]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[4]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[5]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[6]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[7]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[8]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[9]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[10]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[11]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[12]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[13]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[14]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[15]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[16]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[17]}}</font></td>
+			</tr>
+		</table></div>
+		<div id = "tweetInfoTable" align="center" style= "position: absolute; top: 25%; right: 0;left: 0; visibility: hidden; max-width: 75%;margin: auto" ><table width="75%" class="table" border="1">
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[18]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[19]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[20]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[21]}}</font></td>
+			</tr>
+			<tr>
+				<th><font face="Arial" color = "white" size="12pt">{{twitterArray[22]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[23]}}</font></td>
+			</tr>
+			<tr>
+				<th rowspan="3"><font face="Arial" color = "white" size="12pt">{{twitterArray[24]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[25]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[26]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[27]}}</font></td>
+			</tr>
+			<tr>
+				<th rowspan="3"><font face="Arial" color = "white" size="12pt">{{twitterArray[28]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[29]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[30]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[31]}}</font></td>
+			</tr>
+			<tr>
+				<th rowspan="3"><font face="Arial" color = "white" size="12pt">{{twitterArray[32]}}</font></th>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[33]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[34]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="5">{{twitterArray[35]}}</font></td>
+			</tr>
+		</table></div>
+		<div id = "followerInfoTable" align="center" style= "position: absolute; top: 25%; right: 0;left: 0; visibility: hidden; max-width: 75%;margin: auto" ><table width="75%" class="table" border="1">
+			<tr>
+				<th colspan="2"><font face="Arial" color = "white" size="12pt">{{twitterArray[36]}}</font></th>
+				<td align="center" colspan="2"><font face="Arial" color = "white" size="12pt">{{twitterArray[37]}}</font></td>
+			</tr>
+			<tr>
+				<th colspan="2" rowspan="4"><font face="Arial" color = "white" size="12pt">{{twitterArray[38]}}</font></th>
+				<td colspan="2" align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[39]}}</font></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[40]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[41]}}</font></td>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[42]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[43]}}</font></td>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[44]}}</font></td>
+			</tr>
+			<tr>
+				<th colspan="2" rowspan="4"><font face="Arial" color = "white" size="12pt">{{twitterArray[45]}}</font></th>
+				<td  colspan = "2" align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[46]}}</font></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[47]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[48]}}</font></td>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[49]}}</font></td>
+			</tr>
+			<tr>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[50]}}</font></td>
+				<td align="center"><font face="Arial" color = "white" size="12pt">{{twitterArray[51]}}</font></td>
+			</tr>
+		</table></div>
+    	<script>
+    		function search(){
+	var timeline = document.createElement("a");
+	var myScript = document.createElement("script")
+	var myDiv = document.getElementById("feed");
+	var titleDiv = document.getElementById("handleSearch")
+	var handle = (document.getElementById("handle").value);
+	var finalLookup = "https://twitter.com/" + handle;
+	timeline.setAttribute('width','50%');
+	timeline.setAttribute('class','twitter-timeline');
+	timeline.setAttribute('href',finalLookup);
+	myScript.setAttribute('src','https://platform.twitter.com/widgets.js');
+	myScript.setAttribute('charset','utf-8"');
+	myDiv.appendChild(myScript);
+	myDiv.appendChild(timeline);
+	titleDiv.removeAttribute("style"); 
+}
+function clearBox(elementID)
+{
+    document.getElementById(elementID).innerHTML = "";
+}
+function loadOptions(){
+	var option = document.getElementById("optionSelector");
+	var aTag = document.createElement('a');
+	aTag.setAttribute('href','#');
+	aTag.onclick = switchTable(1);
+	aTag.innerHTML = "Option-1\n";
+	option.appendChild(aTag);
+	option.appendChild(document.createElement('br'));
+	aTag = document.createElement('a');
+	aTag.setAttribute('href','#');
+	aTag.onclick = switchTable(2);
+	aTag.innerHTML = "Option-2\n";
+	option.appendChild(aTag);
+	option.appendChild(document.createElement('br'));
+}
+function switchTable(x){
+	console.log(x);
+	clearAll();
+	document.getElementById("dropDiv").setAttribute('align','left');
+	document.getElementById("optionButton").style.left = 100;
+	document.getElementById("optionSelector").setAttribute('align','left');
+	document.getElementById("optionSelector").style.left = 100;
+	document.getElementById("handleSearch").removeAttribute("style");
+	if(x==1){search();}
+	else if(x ==2){
+		console.log("t1");
+		document.getElementById("userInfoTable").style.visibility = "visible";
+		console.log("t2");
+	}
+	else if(x==3){
+		document.getElementById("tweetInfoTable").style.visibility = "visible";
+	}
+	else if(x ==4){
+		document.getElementById("followerInfoTable").style.visibility = "visible";
+	}
+}
+function dropdownF(){
+	document.getElementById("optionSelector").classList.toggle("show");
+}
+function visible(){
+	document.getElementById("dropDiv").style.display = "block";
+	return false
+}
+function clearAll(){
+	document.getElementById("userInfoTable").style.visibility = "hidden";
+	document.getElementById("tweetInfoTable").style.visibility = "hidden";
+	document.getElementById("followerInfoTable").style.visibility = "hidden";
+	clearBox("feed");
+}
+    	</script>
+    	<script> document.getElementById('handle').style.height="50px";
+    		document.getElementById('handle').style.width="220px";
+			document.getElementById('handle').style.fontSize="12pt";</script>
+	</body>
+</html>
