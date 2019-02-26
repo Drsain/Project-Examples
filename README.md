@@ -14,5 +14,5 @@ Using R-Studio I read in a database of cars from a car search website. Based on 
 ## Chalk Cliffs Pictures
 Working as a research assistant with William Kleiber in CU's Applied Math Department, we were investigating a geologically active region called the Chalk Cliffs. Using a software called CloudCompare I was able to investigate fitting two large sets of cloud data(60+ million points) in the same x-y coordinate using different processes. I also cut out smaller samples for fitting, and I examined other tools that CloudCompare offered.
 
-##Hack CU 2018
+## Hack CU 2018
 I worked in a team of three to use the Twitter API to create a project. I mostly did HTML with the flask implementation to connect the HTML to the python. My other two partners did the base HTML code and the python algorithms.
