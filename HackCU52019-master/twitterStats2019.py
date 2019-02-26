@@ -1,10 +1,10 @@
 # Import the tweepy library
 import tweepy
 # Variables that contains the user credentials to access Twitter API 
-ACCESS_TOKEN = '3067050784-dHA28dy0Q5dRQ6gq0FbtP1RSOIiUTUaqbGorU3e'
-ACCESS_SECRET = 'prXOwddr07Pz5kcuwZYTOxKGWRkbjylaqsr022EvhkHXu'
-CONSUMER_KEY = 'mjjwlnKgURc4IkQ4bZ55GlVJp'
-CONSUMER_SECRET = '2eDxNQ1AjRc7lEe2XbgvW1DJ6BZjaoojiStIdEGYhtqmcoF6hL'
+ACCESS_TOKEN = 'access token'
+ACCESS_SECRET = 'access secret'
+CONSUMER_KEY = 'consumer key'
+CONSUMER_SECRET = 'consumer secret'
 
 
 def userInfo(user_name, api):
