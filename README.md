@@ -16,3 +16,6 @@ Working as a research assistant with William Kleiber in CU's Applied Math Depart
 
 ## Hack CU 2018
 I worked in a team of three to use the Twitter API to create a project. I mostly did HTML with the flask implementation to connect the HTML to the python. My other two partners did the base HTML code and the python algorithms. Unfortunately to protect the Twitter account that we linked the project to, we cannot provide the access keys and consumer keys. In order for the program to work one must get these themselves.
+
+## Heroku Deployed APP
+I worked with a team of 5 during my software development class to create a piece of software. We decided to do a 'Net Work Calculator'. We used mySQL for the back end, HTML and CSS for the front end and we used javascript for the back end. I started to work on the front end. My and other student worked on the HTML and CSS used to create the visual aspects of the website. I ended up working on most of the javascript at the end of the project. I was involved in all of the javascript except for two of the javascript functions included in the final patch.
