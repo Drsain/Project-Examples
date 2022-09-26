@@ -1,7 +1,7 @@
 # Projects
 A collection of intriguing programs that I have completed both during school and outside the classroom.
 
-## [Kriging Final Project (2022)](/Stat2_Final_Project/Stat2_Report.pdf)
+## [Kriging Final Project (2022)](/Stat2_Final_Project/)
 The final project of my Applied Statistics II class. For this project I decided to research Kriging, an advanced statistical technique that we did not learn about in class. I investigated and created a model to investigate some weather station data from the GHCN. The report is included.
 
 ## [Norse Contemporary Essay (2022)](/Norse_Contemporary_Essay.docx)
@@ -13,7 +13,7 @@ The final project for my natural language processing class. Another student and 
 ## [Tolkien Thesis (2021)](/Tolkien_Thesis/)
 A source analysis project describing Tolkien's relationship with his nordic sources. Specifically this project dives into the nodic poem, The Saga of the Volsungs, and the special swords that Tolkien takes inspiration from to create Anduril.
 
-## [Machine Learning (2021)](/Machine_Learning_Project/ML_Report.pdf)
+## [Machine Learning (2021)](/Machine_Learning_Project/)
 Working with a small team of three during my machine learning class, we aspired to create a machine learning algorithm that would make our lives as students easier. Thus we created a 'test taking' algorithm. We used a hugging face neural network to read in various pages from a textbook and then answer questions based on those pages. The report of the project is included.
 
 ## [HackCU (2020)](https://github.com/jacobfelknor/PostGold---HackCU2020)
