@@ -1,6 +1,12 @@
 # Projects
 A collection of intriguing programs that I have completed both during school and outside the classroom.
 
+## [Dublin Summer Project (2024)](/Dublin_Summer_Research/)
+The final report and poster for the two months I spent studning abroad in Dublin. The project included a sepsis prediction tool and a potential augmentation of Sequential Organ Failure Assessment (SOFA) scores. 
+
+## [Opertating Systems Recitation Slides (2024)](/TA_Slides/)
+The various slides that I created based on previous years recitions. Slides were editied and adjusted based on the needs for the week and suggestions from my students. Kahoot quizzes were utilized as as way to keep students engaged. Quizzes included a variety of problems, including code replacement, definition matching, problem solving, and more.
+
 ## [Kriging Final Project (2022)](/Stat2_Final_Project/)
 The final project of my Applied Statistics II class. For this project I decided to research Kriging, an advanced statistical technique that we did not learn about in class. I investigated and created a model to investigate some weather station data from the GHCN. The report is included.
 
